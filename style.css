@@ -141,6 +141,25 @@ button:hover {
     transform: translateY(-2px);
 }
 
+/* Language Switcher Styles */
+#vietnameseButton, #englishButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #58a6ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#vietnameseButton:hover, #englishButton:hover {
+    background-color: #6a0dad;
+    box-shadow: 0 6px 10px rgba(106, 13, 173, 0.5);
+    transform: translateY(-2px);
+}
+
 /* Main Content */
 main {
     padding: 3rem;
