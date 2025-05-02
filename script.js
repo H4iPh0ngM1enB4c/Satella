@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "English": "English"
         },
         vi: {
-            "Community": "Cộng đồng",
+            "Community": "Community",
             "Shop": "Cửa hàng",
             "User": "Người dùng",
             "Join Discord": "Tham gia Discord",
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Contact": "Liên hệ",
             "Privacy Policy": "Chính sách bảo mật",
             "Terms of Service": "Điều khoản dịch vụ",
-            "Welcome to the community!": "Chào mừng đến với cộng đồng!",
+            "Welcome to the community!": "Chào mừng đến với Satella Community!",
             "Communicate with others": "Giao tiếp với mọi người",
             "Expand your system": "Mở rộng hệ thống của bạn",
             "Learn more about the anarchist server": "Tìm hiểu thêm về máy chủ vô chính phủ",
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Your privacy is important to us.": "Quyền riêng tư của bạn rất quan trọng với chúng tôi.",
             "Terms": "Điều khoản",
             "Credits": "Tín dụng",
-            "About Our Community": "Về Cộng đồng của Chúng tôi",
+            "About Our Community": "Về Community của Chúng tôi",
             "Welcome to Satella Community! Here, you can:": "Chào mừng đến với Satella Community! Tại đây, bạn có thể:",
             "How to Buy": "Hướng Dẫn Mua Hàng",
             "Steps to Purchase": "Các Bước Mua Hàng",
