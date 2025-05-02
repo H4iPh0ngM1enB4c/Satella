@@ -1,0 +1,232 @@
+/* Update Font Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+p, ul, li {
+    font-weight: 400;
+}
+
+/* Modernized General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header Styles */
+header {
+    background: #161b22;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background: #21262d;
+    color: #58a6ff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(88, 166, 255, 0.5);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(145deg, #161b22, #0d1117);
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #58a6ff;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #8b949e;
+}
+
+/* Adjust Get Started Button Size */
+.hero a {
+    padding: 0.6rem 1.5rem; /* Reduce padding */
+    font-size: 1rem; /* Adjust font size */
+    border-radius: 8px; /* Slightly rounded corners */
+    display: inline-block;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #4b0082, #6a0dad);
+    border: 2px solid #6a0dad;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.hero a:hover {
+    background: linear-gradient(90deg, #6a0dad, #4b0082);
+    color: #fff;
+    box-shadow: 0 6px 12px rgba(106, 13, 173, 0.5);
+    transform: translateY(-3px);
+}
+
+/* Custom Button Styles */
+button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background: #4b0082; /* Server primary color */
+    border: none;
+    border-radius: 5px; /* Square corners */
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background: #6a0dad; /* Slightly lighter shade for hover */
+    box-shadow: 0 6px 10px rgba(106, 13, 173, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+    padding: 3rem;
+    text-align: center;
+}
+
+/* Update Section Background */
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: #161b22; /* Dark background */
+    color: #c9d1d9; /* Light text color */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    color: #2575fc;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+section p, section ul {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Adjust Footer Padding and Position */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #161b22;
+    color: #8b949e;
+    text-align: center;
+    padding: 1rem 2rem; /* Adjust padding to prevent overlap */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; /* Ensure all items are in a single row */
+}
+
+footer nav ul {
+    justify-content: flex-end; /* Align links to the right */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    display: inline;
+}
+
+footer .developer-info {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: #8b949e;
+}
+
+footer nav ul li a {
+    color: #58a6ff; /* Change to primary blue color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: #6a0dad; /* Slightly lighter shade on hover */
+}
+
+a {
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+    background: #2575fc;
+}
