@@ -3,6 +3,16 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0d1117; /* Reverted to original background color */
+    color: #c9d1d9;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1, h2, h3 {
@@ -11,18 +21,6 @@ h1, h2, h3 {
 
 p, ul, li {
     font-weight: 400;
-}
-
-/* Modernized General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #0d1117;
-    color: #c9d1d9;
-    line-height: 1.6;
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -73,6 +71,14 @@ header nav ul li a:hover {
     color: #58a6ff;
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(88, 166, 255, 0.5);
+}
+
+/* Navbar active link style */
+header nav ul li a.active {
+    border-bottom: 3px solid #58a6ff;
+    color: #58a6ff !important;
+    background: none !important;
+    font-weight: bold;
 }
 
 /* Hero Section */
@@ -162,19 +168,23 @@ button:hover {
 
 /* Main Content */
 main {
-    padding: 3rem;
+    padding: 2rem 0 2rem 0;
     text-align: center;
+    min-height: 40vh;
 }
 
 /* Update Section Background */
 section {
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background: #161b22; /* Dark background */
-    color: #c9d1d9; /* Light text color */
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem;
+    background: #161b22;
+    color: #c9d1d9;
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section:hover {
@@ -191,14 +201,15 @@ section h2 {
 section p, section ul {
     font-size: 1.1rem;
     color: #555;
+    text-align: left; /* Align text to the left */
 }
 
 /* Adjust Footer Padding and Position */
 footer {
-    position: fixed;
+    position: relative; /* Change from fixed to relative */
     bottom: 0;
     width: 100%;
-    background: #161b22;
+    background: #161b22; /* Reverted to original footer background */
     color: #8b949e;
     text-align: center;
     padding: 1rem 2rem; /* Adjust padding to prevent overlap */
@@ -208,6 +219,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-direction: row; /* Ensure all items are in a single row */
+    margin-top: auto;
 }
 
 footer nav ul {
@@ -250,18 +262,54 @@ a:hover {
     background: #2575fc;
 }
 
-a.download-button {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
+a.download-button, .download-card a[style*="background: #238636"] {
+    transition: background 0.25s, box-shadow 0.25s, transform 0.2s, border 0.2s;
     background: #238636;
     color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid transparent;
+}
+a.download-button:hover, .download-card a[style*="background: #238636"]:hover {
+    background: #2ea043;
+    box-shadow: 0 0 16px 2px #58a6ff, 0 4px 16px rgba(34,197,94,0.18);
+    transform: scale(1.06);
+    border: 2px solid #58a6ff;
+    color: #fff;
 }
 
-a.download-button:hover {
-    background: #2ea043;
-    transform: scale(1.05);
+.clock-widget {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #161b22;
+    border-radius: 10px;
+    padding: 10px 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 1200;
+    min-width: 140px;
+    text-align: center;
+}
+.clock-widget #clock-time {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.clock-widget #clock-date {
+    font-size: 1rem;
+    color: #b3b3b3;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.download-card {
+    transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
+    border: 1.5px solid transparent;
+}
+.download-card:hover {
+    box-shadow: 0 8px 32px rgba(88,166,255,0.25), 0 2px 8px rgba(0,0,0,0.15);
+    transform: scale(1.04) translateY(-4px);
+    border: 2px solid #58a6ff;
+    box-shadow: 0 0 16px 2px #58a6ff, 0 8px 32px rgba(88,166,255,0.15);
 }

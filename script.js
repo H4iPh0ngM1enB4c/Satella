@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Terms": "Điều khoản",
             "Credits": "Tín dụng",
             "About Our Community": "Về Cộng đồng của Chúng tôi",
-            "Welcome to Satella Community! Here, you can:": "Chào mừng đến với Satella Community! Tại đây, bạn có thể:",
+            "Welcome to Satella Community! Here, you can": "Chào mừng đến với Satella Community! Tại đây, bạn có thể:",
             "How to Buy": "Hướng Dẫn Mua Hàng",
             "Steps to Purchase": "Các Bước Mua Hàng",
             "Join our Discord server.": "Tham gia máy chủ Discord của chúng tôi.",
@@ -219,7 +219,14 @@ document.addEventListener('DOMContentLoaded', () => {
             "Innovative Minecraft client with unique features.": "Client Minecraft sáng tạo với các tính năng độc đáo.",
             "Version:": "Phiên bản:",
             "Size:": "Kích thước:",
-            "Download": "Tải xuống"
+            "Download": "Tải xuống",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
+            "": "",
         }
     };
 
@@ -237,4 +244,43 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedLanguage) {
         translatePage(savedLanguage);
     }
+
+    function updateClock() {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        const formattedHours = (hours % 12 || 12).toString().padStart(2, '0');
+
+        const timeString = `${formattedHours}:${minutes}:${seconds} ${ampm}`;
+        const dateString = now.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        document.getElementById('clock-time').textContent = timeString;
+        document.getElementById('clock-date').textContent = dateString;
+    }
+
+    setInterval(updateClock, 1000);
+
+    // Highlight current page in navbar
+    function highlightActiveNav() {
+        const path = window.location.pathname.split('/').pop();
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            // Remove any previous active
+            link.classList.remove('active');
+            // If link matches current page
+            if (
+                (path === '' && link.getAttribute('href').includes('index.html')) ||
+                (path !== '' && link.getAttribute('href').includes(path))
+            ) {
+                link.classList.add('active');
+            }
+        });
+    }
+    highlightActiveNav();
 });
